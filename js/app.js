@@ -62,6 +62,48 @@ var firtPikeStore = {
     }
 }
 
+var seatecUI = document.getElementById('seatec-aiport');
+
+var seatecStore = {
+
+    minCust: 3,
+    maxCust: 24,
+    avgCookiesSold: 1.2,
+
+    hoursOfOperation: [
+        '6am',
+        '7am',
+        '8am',
+        '9am',
+        '10am',
+        '11am',
+        '12pm',
+        '1pm',
+        '2pm',
+        '3pm',
+        '4pm',
+        '5pm',
+        '6pm',
+        '7pm',
+        '8pm',
+    ],
+
+    makeRandom: function() {
+        return Math.round(math.random() * (this.maxCust - this.minCust) + this.minCust);
+    },
+
+    cookiesPerHour: [],
+    cookiesSold: 0,
+
+    calculate: function() {
+        for(var i = 0; i < this.hoursOfOperation.length; i++) {
+            var randomCustomer = this.makeRandom();
+            this.cookiesSold = 
+        }
+    }
+
+}
+
 firtPikeStore.render();
 // Logging various properties for visual purposes.
 console.log("Calculate function " + firtPikeStore.calculate());
